@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main #mc_embed_signup form:not(.mx-auto) {
+  margin: 0;
+}
+main #mc_embed_signup form.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+main #mc_embed_signup form .mc-field-group {
+  @apply pb-0;
+}
+main #mc_embed_signup form .button {
+  @apply bg-primary h-full m-0 h-[38px] font-bold text-dark hover:text-white hover:bg-primary;
+}
+#mc_embed_signup form #mce-responses {
+  @apply m-0;
+}
+#mc_embed_signup form #mce-success-response {
+  @apply text-primary p-0 pt-4;
+  margin: 0;
+}
