@@ -32,7 +32,7 @@ jobs:
           fi
       - uses: actions/checkout@main
       - name: Add CNAME File
-        run: echo "swap-slovenia.com" > ./dist/CNAME
+        run: touch ./dist/CNAME && echo "swap-slovenia.com" > ./dist/CNAME
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
