@@ -30,6 +30,8 @@ jobs:
             echo "Folder 'dist' does not exist"
             exit 1
           fi
+      - name: Check ls
+        run: ls -alt
       - name: Add CNAME File
         run: touch ./dist/CNAME && echo "swap-slovenia.com" > ./dist/CNAME
 
@@ -40,7 +42,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
-
+      - name: Check ls
+        run: ls -alt
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
