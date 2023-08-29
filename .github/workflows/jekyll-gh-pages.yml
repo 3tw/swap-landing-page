@@ -24,13 +24,13 @@ jobs:
       - name: Build with Vite
         run: npm run build
 
-      - uses: actions/checkout@main
-      - name: Check if /dist was buid
+      - name: Check if /dist was build
         run: |
           if [ ! -d "dist" ]; then
             echo "Folder 'dist' does not exist"
             exit 1
           fi
+      - uses: actions/checkout@main
       - name: Add CNAME File
         run: echo "swap-slovenia.com" > ./dist/CNAME
       - name: Deploy
