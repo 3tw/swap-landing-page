@@ -16,7 +16,7 @@ main #mc_embed_signup form.mx-auto {
   margin-bottom: 0;
 }
 main #mc_embed_signup form .mc-field-group {
-  @apply pb-0;
+  @apply pb-0 basis-56;
 }
 main #mc_embed_signup form .button {
   @apply bg-primary h-full m-0 h-[38px] font-bold text-dark hover:text-white hover:bg-primary;
