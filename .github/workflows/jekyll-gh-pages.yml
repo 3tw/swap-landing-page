@@ -24,15 +24,19 @@ jobs:
       - name: Build with Vite
         run: npm run build
 
-      - name: Add CNAME File
-        run: echo "swap-slovenia.com" > ./dist/CNAME
-
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-
+      - name: Check if /dist was buid
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "Folder 'dist' does not exist"
+            exit 1
+          fi
+      - name: Add CNAME File
+        run: echo "swap-slovenia.com" > ./dist/CNAME
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
